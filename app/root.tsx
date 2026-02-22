@@ -10,6 +10,18 @@ import './i18n'
 import type { Route } from './+types/root'
 
 export const links: Route.LinksFunction = () => [
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '32x32',
+    href: `${import.meta.env.BASE_URL}favicon-32.png`,
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '64x64',
+    href: `${import.meta.env.BASE_URL}favicon-64.png`,
+  },
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
     rel: 'preconnect',

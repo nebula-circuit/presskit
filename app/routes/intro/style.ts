@@ -1,6 +1,6 @@
 import { theme } from '../../theme'
 
-const BG_IMAGE = '/assets/img/bg.jpg'
+const BG_IMAGE = `${import.meta.env.BASE_URL}assets/img/bg.jpg`
 
 export const styles = {
   root: {

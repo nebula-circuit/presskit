@@ -41,7 +41,7 @@ export default function Page() {
               <Box sx={styles.mediaWrap}>
                 <CardMedia
                   component='img'
-                  image={release.image}
+                  image={`${import.meta.env.BASE_URL}${release.image.replace(/^\//, '')}`}
                   alt={release.title}
                   sx={styles.media}
                   onError={(e) => {

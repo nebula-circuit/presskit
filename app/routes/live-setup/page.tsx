@@ -9,7 +9,12 @@ export default function Page() {
 
   return (
     <Box sx={styles.root}>
-      <Box component='img' src={t('pages.liveSetup.image')} alt='Live setup' sx={styles.image} />
+      <Box
+        component='img'
+        src={`${import.meta.env.BASE_URL}${String(t('pages.liveSetup.image')).replace(/^\//, '')}`}
+        alt='Live setup'
+        sx={styles.image}
+      />
 
       <Typography variant='body1' sx={styles.intro}>
         {t('pages.liveSetup.intro')}
