@@ -22,6 +22,7 @@ function muiJsxPlugin() {
 }
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? '/presskit/' : '/',
   plugins: [muiJsxPlugin(), reactRouter(), tsconfigPaths()],
   optimizeDeps: {
     // MUI/styled-engine ships .js files that contain JSX
