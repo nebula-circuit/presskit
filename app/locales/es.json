@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "brand": "NEBULA CIRCUIT",
+    "subtitle": "presskit",
+    "openDrawer": "Abrir menú",
+    "intro": "Intro",
+    "releases": "Releases",
+    "liveSetup": "Live setup",
+    "gallery": "Galería",
+    "technicalRider": "Rider técnico"
+  },
+  "language": {
+    "label": "Idioma",
+    "switchTo": "Cambiar idioma"
+  },
+  "pages": {
+    "intro": {
+      "shortBioTitle": "Biografía corta",
+      "longBioTitle": "Biografía larga",
+      "copyBio": "Copiar",
+      "copied": "Copiado!"
+    },
+    "releases": {
+      "listenOnBandcamp": "Escuchar en Bandcamp",
+      "list": [
+        {
+          "id": "scars",
+          "title": "Scars On A D. Mind",
+          "label": "Fill-Lex Records",
+          "date": "6 diciembre 2024",
+          "description": "EP en cassette y digital. Downtempo, leftfield y electro con esencia oscura. Cinco cortes incluyendo bonus digital.",
+          "url": "https://fill-lexrecords.bandcamp.com/album/scars-on-a-digital-mind",
+          "image": "/assets/img/scars-on-a-digital-mind.jpg"
+        },
+        {
+          "id": "talisman",
+          "title": "Talisman",
+          "label": "BARRO",
+          "date": "16 septiembre 2025",
+          "description": "Vinilo 12\" y digital. EBM, techno y electroclash para la pista. Incluye remixes de Orlok 101 y Abraxas.",
+          "url": "https://barrolabel.bandcamp.com/album/talisman",
+          "image": "/assets/img/talisman.jpg"
+        },
+        {
+          "id": "synthetic",
+          "title": "Synthetic Resistance",
+          "label": "Raw Planet",
+          "date": "23 diciembre 2025",
+          "description": "EP digital. Tres temas de electro profundo y atmósferas sólidas.",
+          "url": "https://rawplanet.bandcamp.com/album/synthetic-resistance-rwplnt-005",
+          "image": "/assets/img/synthetic-resistance.jpg"
+        }
+      ]
+    },
+    "liveSetup": {
+      "image": "/assets/img/live-setup-diagram.jpeg",
+      "intro": "Hardware live setup",
+      "darkTrinity": "Analog Rytm (AR) en drums. Analog Four (A4) en bajos, subs, FX y leads. Octatrack (OT) como mixer y disparo de samples",
+      "pill": "The Pill: ducking",
+      "goldenMaster": "Endorphines Golden Master: procesador end-of-chain",
+      "routingTitle": "Signal flow",
+      "routing": [
+        "AR track 1 (kick) → entrada trigger de The Pill",
+        "A4 track 1 (sub-bass) → entrada de audio de The Pill",
+        "Kick → un canal del OT; sub-bass → segundo canal del OT",
+        "Salida principal del A4 → entrada de audio del AR; salida master del AR → tercer canal del OT",
+        "Golden Master al final de la cadena para compresión"
+      ]
+    },
+    "gallery": { "title": "Galería" },
+    "technicalRider": { "title": "Rider técnico" }
+  },
+  "bio": {
+    "short": "Nebula Circuit es el proyecto de música electrónica con base en Alcoy, España. Especializado en un sonido Dark Electro crudo y directo, su propuesta se aleja de la reproducción pasiva para centrarse en el directo analógico. Con raíces profundamente ligadas a la escena oscura y la cultura de club de los 80, Nebula Circuit fusiona ritmos mecánicos de herencia EBM con atmósferas distópicas y síntesis cruda. Tras lanzamientos en sellos como Fill-Lex Records y Barro, se consolida como una de las propuestas más físicas y auténticas del panorama electro/industrial actual.",
+    "long": [
+      "Bajo el alias de Nebula Circuit se encuentra un arquitecto de sonidos oscuros que opera desde la intersección entre el código y el silicio. Residente en Alcoy y profundamente influenciado por el legado industrial de la escena valenciana, este artista ha desarrollado una identidad sonora centrada en el Electro y el Dark Electro, donde el error analógico y la precisión rítmica conviven en tensión constante.",
+      "El proyecto nace de la necesidad de devolver la fisicalidad a la música electrónica. En sus directos, Nebula Circuit prescinde de estructuras pre-grabadas para desplegar un setup basado íntegramente en sintetizadores y cajas de ritmo, permitiendo que cada actuación sea una pieza única de improvisación controlada. Su sonido es una respuesta moderna a las influencias del post-punk, el gothic rock y el EBM más primitivo, procesadas a través de una lente futurista y cyber-industrial.",
+      "Su trayectoria discográfica cuenta con hitos clave como el EP \"Scars On A Digital Mind\" (Fill-Lex Records), donde explora desde el downtempo psicótico hasta el electro de pista, y su más reciente trabajo \"Talisman\" (Barro), que incluye declaraciones de principios como \"I Bring Fucking Synthesizers\".",
+      "Como desarrollador web en su vida profesional, Nebula Circuit entiende la música como un sistema de flujos y señales que deben ser manipuladas en tiempo real. No solo compone pistas, programa experiencias auditivas diseñadas para entornos de club oscuros donde la máquina y el humano se vuelven indistinguibles."
+    ]
+  },
+  "footer": {
+    "instagram": "Instagram",
+    "soundcloud": "Soundcloud",
+    "discogs": "Discogs"
+  },
+  "error": {
+    "generic": "¡Ups!",
+    "unexpected": "Ha ocurrido un error inesperado.",
+    "notFound": "No se encontró la página solicitada."
+  }
+}

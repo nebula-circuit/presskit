@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build
+build/
+dist/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs and cache
+*.log
+.npm
+.pnpm-store/
+.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# React Router / Vite
+.react-router/
