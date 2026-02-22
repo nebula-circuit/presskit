@@ -100,6 +100,7 @@ export default function Page() {
           <IconButton
             aria-label={t('nav.openDrawer')}
             edge='start'
+            size='large'
             onClick={handleDrawerToggle}
             sx={styles.navMobileButton}
           >
@@ -122,9 +123,11 @@ export default function Page() {
             ))}
           </Tabs>
 
-          <Box sx={styles.languageSwitchContainer}>
-            <LanguageSwitch />
-          </Box>
+          {!isMobile && (
+            <Box sx={styles.languageSwitchContainer}>
+              <LanguageSwitch />
+            </Box>
+          )}
         </Toolbar>
       </AppBar>
 

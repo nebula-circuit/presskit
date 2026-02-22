@@ -16,6 +16,15 @@ export const styles = {
     my: 2,
     textAlign: 'center',
   },
+  navListContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    gap: 2,
+  },
+  languageSwitchContainer: {
+    textAlign: 'center',
+  },
 }
 
 export const NavListItemButton = styled(ListItemButton, {

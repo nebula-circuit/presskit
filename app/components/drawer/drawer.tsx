@@ -7,6 +7,8 @@ import ListItemText from '@mui/material/ListItemText'
 import Typography from '@mui/material/Typography'
 import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
+import LanguageSwitch from '../language-switch/language-switch'
+import { useIsMobile } from '../../hooks/use-is-mobile'
 import { Routes } from '../../routes'
 import { styles, NavListItemButton } from './style'
 
@@ -28,6 +30,8 @@ interface NavDrawerProps {
 export default function NavDrawer({ open, onClose, pathname, navItems }: NavDrawerProps) {
   const { t } = useTranslation()
 
+  const isMobile = useIsMobile()
+
   return (
     <nav>
       <Drawer
@@ -46,15 +50,23 @@ export default function NavDrawer({ open, onClose, pathname, navItems }: NavDraw
 
           <Divider />
 
-          <List>
-            {navItems.map((item) => (
-              <ListItem key={item} disablePadding>
-                <NavListItemButton component={Link} to={item} $active={pathname === `/${item}`}>
-                  <ListItemText primary={t(navKeys[item] ?? item)} />
-                </NavListItemButton>
-              </ListItem>
-            ))}
-          </List>
+          <Box sx={styles.navListContainer}>
+            <List>
+              {navItems.map((item) => (
+                <ListItem key={item} disablePadding>
+                  <NavListItemButton component={Link} to={item} $active={pathname === `/${item}`}>
+                    <ListItemText primary={t(navKeys[item] ?? item)} />
+                  </NavListItemButton>
+                </ListItem>
+              ))}
+            </List>
+
+            {isMobile && (
+              <Box sx={styles.languageSwitchContainer}>
+                <LanguageSwitch />
+              </Box>
+            )}
+          </Box>
         </Box>
       </Drawer>
     </nav>
