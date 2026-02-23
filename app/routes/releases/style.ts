@@ -71,4 +71,17 @@ export const styles = {
   cta: {
     fontWeight: 600,
   },
+  sessionsSection: {
+    mt: 5,
+  },
+  sessionsTitle: {
+    fontWeight: 600,
+    mb: 2,
+  },
+  embed: {
+    width: '100%',
+    border: 'none',
+    borderRadius: 1,
+    overflow: 'hidden',
+  },
 }

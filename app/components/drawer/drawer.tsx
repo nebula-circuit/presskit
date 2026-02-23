@@ -7,9 +7,9 @@ import ListItemText from '@mui/material/ListItemText'
 import Typography from '@mui/material/Typography'
 import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
-import LanguageSwitch from '../language-switch/language-switch'
-import { useIsMobile } from '../../hooks/use-is-mobile'
-import { Routes } from '../../routes'
+import LanguageSwitch from '@/components/language-switch/language-switch'
+import { useIsMobile } from '@/hooks/use-is-mobile'
+import { Routes } from '@/routes'
 import { styles, NavListItemButton } from './style'
 
 const navKeys: Record<string, string> = {
@@ -43,7 +43,7 @@ export default function NavDrawer({ open, onClose, pathname, navItems }: NavDraw
           keepMounted: true, // NOTE: Better open performance on mobile
         }}
       >
-        <Box onClick={onClose}>
+        <Box>
           <Typography variant='h6' sx={styles.navTitle}>
             {t('nav.brand')}
           </Typography>
@@ -51,7 +51,7 @@ export default function NavDrawer({ open, onClose, pathname, navItems }: NavDraw
           <Divider />
 
           <Box sx={styles.navListContainer}>
-            <List>
+            <List onClick={onClose}>
               {navItems.map((item) => (
                 <ListItem key={item} disablePadding>
                   <NavListItemButton component={Link} to={item} $active={pathname === `/${item}`}>

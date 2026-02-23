@@ -6,6 +6,7 @@ export const Routes = {
   LIVE_SETUP: 'live-setup',
   GALLERY: 'gallery',
   TECHNICAL_RIDER: 'technical-rider',
+  CONTACT: 'contact',
 } as const
 
 export default [
@@ -16,5 +17,6 @@ export default [
     route(Routes.LIVE_SETUP, 'routes/live-setup/page.tsx'),
     route(Routes.GALLERY, 'routes/gallery/page.tsx'),
     route(Routes.TECHNICAL_RIDER, 'routes/technical-rider/page.tsx'),
+    route(Routes.CONTACT, 'routes/contact/page.tsx'),
   ]),
 ] satisfies RouteConfig

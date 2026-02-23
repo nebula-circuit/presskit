@@ -1,6 +1,6 @@
 import ButtonGroup from '@mui/material/ButtonGroup'
 import { useTranslation } from 'react-i18next'
-import { type Language, languages, setStoredLanguage } from '../../i18n'
+import { type Language, languages, setStoredLanguage } from '@/i18n'
 import { LangButton } from './style'
 
 export default function LanguageSwitch() {

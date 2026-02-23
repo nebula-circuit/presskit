@@ -7,7 +7,8 @@
     "releases": "Releases",
     "liveSetup": "Live setup",
     "gallery": "Gallery",
-    "technicalRider": "Technical rider"
+    "technicalRider": "Technical rider",
+    "contact": "Contact"
   },
   "language": {
     "label": "Language",
@@ -22,6 +23,13 @@
     },
     "releases": {
       "listenOnBandcamp": "Listen on Bandcamp",
+      "sessionsTitle": "Live sessions",
+      "sessions": [
+        {
+          "title": "SAT 002",
+          "url": "https://soundcloud.com/nebulacircuit/sat-002-nebula-circuit-live"
+        }
+      ],
       "list": [
         {
           "id": "scars",
@@ -30,7 +38,7 @@
           "date": "December 6, 2024",
           "description": "Cassette and digital EP. Downtempo, leftfield and electro with a dark edge. Five tracks including digital bonus.",
           "url": "https://fill-lexrecords.bandcamp.com/album/scars-on-a-digital-mind",
-          "image": "/assets/img/scars-on-a-digital-mind.jpg"
+          "image": "/assets/img/scars-on-a-digital-mind.webp"
         },
         {
           "id": "talisman",
@@ -39,7 +47,7 @@
           "date": "September 16, 2025",
           "description": "12\" vinyl and digital. EBM, techno and electroclash for the floor. Includes remixes by Orlok 101 and Abraxas.",
           "url": "https://barrolabel.bandcamp.com/album/talisman",
-          "image": "/assets/img/talisman.jpg"
+          "image": "/assets/img/talisman.webp"
         },
         {
           "id": "synthetic",
@@ -48,12 +56,12 @@
           "date": "December 23, 2025",
           "description": "Digital EP. Three deep electro tracks with solid atmospheres.",
           "url": "https://rawplanet.bandcamp.com/album/synthetic-resistance-rwplnt-005",
-          "image": "/assets/img/synthetic-resistance.jpg"
+          "image": "/assets/img/synthetic-resistance.webp"
         }
       ]
     },
     "liveSetup": {
-      "image": "/assets/img/live-setup-diagram.jpeg",
+      "image": "/assets/img/live-setup-diagram.webp",
       "intro": "Hardware live setup",
       "darkTrinity": "Analog Rytm (AR) on drums. Analog Four (A4) on basses, subs, FX and leads. Octatrack (OT) as mixer and sample-trigger",
       "pill": "The Pill: ducking",
@@ -67,15 +75,53 @@
         "Golden Master at end-of-chain for compression"
       ]
     },
-    "gallery": { "title": "Gallery" },
-    "technicalRider": { "title": "Technical rider" }
+    "gallery": {
+      "title": "Gallery",
+      "download": "Download hi-res photos",
+      "downloadShort": "Download photos",
+      "downloading": "Downloading...",
+      "images": [
+        { "src": "/assets/img/gallery-1.webp", "alt": "Nebula Circuit image 1" },
+        { "src": "/assets/img/gallery-2.webp", "alt": "Nebula Circuit image 2" },
+        { "src": "/assets/img/gallery-3.webp", "alt": "Nebula Circuit image 3" },
+        { "src": "/assets/img/gallery-4.webp", "alt": "Nebula Circuit image 4" },
+        { "src": "/assets/img/gallery-5.webp", "alt": "Nebula Circuit image 5" }
+      ]
+    },
+    "technicalRider": {
+      "title": "Technical rider",
+      "general": {
+        "title": "General",
+        "text": "The presence of an adequately sized PA system in the concert venue, equipped with a reliable power source ensuring an unblemished 100 dB SPL RMS at the mixing desk"
+      },
+      "tech": {
+        "title": "What I need (tech)",
+        "items": [
+          "XLR or balanced inputs preferred over RCA for the output audio signal (from end-of-chain processor)",
+          "Rec out",
+          "Monitor speakers"
+        ]
+      },
+      "stage": {
+        "title": "What I need (stage plan)",
+        "text": "100cm × 60cm on a desk at least 110 cm high. Dark environment or warm light is preferred"
+      },
+      "arrival": {
+        "title": "Arrival",
+        "text": "Please provide detailed directions in English, the complete address of the venue and a telephone contact. Also will need the soundcheck schedule, doors-open and on-stage times. For the soundcheck, 30 minutes should be enough"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "nebulacircuit21@gmail.com"
+    }
   },
   "bio": {
-    "short": "Nebula Circuit is an electronic music project based in Alcoy, Spain. Specialising in raw, direct Dark Electro, the project moves away from passive playback to focus on analogue live performance. With roots firmly in the dark scene and 80s club culture, Nebula Circuit fuses mechanical EBM-inherited rhythms with dystopian atmospheres and raw synthesis. After releases on labels such as Fill-Lex Records and Barro, the project has established itself as one of the most physical and authentic voices in the current electro/industrial landscape.",
+    "short": "Nebula Circuit is an electronic music project based in Alcoy (Valencia) specialising in raw, direct Dark Electro. The project moves away from passive playback to focus on analogue live performance. With roots firmly in the dark scene and 80s club culture, Nebula Circuit fuses mechanical EBM-inherited rhythms with dystopian atmospheres and raw synthesis. After releases on labels such as Fill-Lex Records and Barro, the project has established itself as one of the most physical and authentic voices in the current electro/industrial landscape.",
     "long": [
       "Behind the alias Nebula Circuit is an architect of dark sounds operating at the intersection of code and silicon. Based in Alcoy and deeply influenced by the industrial legacy of the Valencia scene, this artist has developed a sonic identity centred on Electro and Dark Electro, where analogue imperfection and rhythmic precision exist in constant tension.",
       "The project was born from the need to bring physicality back to electronic music. In live performance, Nebula Circuit does away with pre-recorded structures and deploys a setup based entirely on synths and drum machines, so that each show is a unique piece of controlled improvisation. The sound is a modern response to the influences of post-punk, gothic rock and primitive EBM, filtered through a futurist, cyber-industrial lens.",
-      "Key releases include the EP \"Scars On A Digital Mind\" (Fill-Lex Records), moving from psychotic downtempo to club electro, and the more recent \"Talisman\" (Barro), which includes statements of intent such as \"I Bring Fucking Synthesizers\".",
+      "Key releases include the EP \"Scars On A Digital Mind\" (Fill-Lex Records), moving from psychotic downtempo to club electro, and the more recent [\"Talisman\" (Barro)](https://barrolabel.bandcamp.com/album/talisman), which includes statements of intent such as \"I Bring Fucking Synthesizers\".",
       "As a web developer in his professional life, Nebula Circuit approaches music as a system of flows and signals to be manipulated in real time. He doesn't just compose tracks, he programmes auditory experiences designed for dark club environments where machine and human become indistinguishable."
     ]
   },

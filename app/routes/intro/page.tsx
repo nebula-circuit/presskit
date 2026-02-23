@@ -3,7 +3,8 @@ import Button from '@mui/material/Button'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import ContentCopy from '@mui/icons-material/ContentCopy'
-import { useCopyToClipboard } from '../../hooks/use-copy-to-clipboard'
+import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard'
+import { parseLinks, stripLinks } from '@/utils/parse-links'
 import { useTranslation } from 'react-i18next'
 import { styles } from './style'
 
@@ -15,7 +16,9 @@ export default function Page() {
 
   const shortBioText = t('bio.short')
 
-  const longBioText = Array.isArray(longBioParagraphs) ? longBioParagraphs.join('\n\n') : ''
+  const longBioText = Array.isArray(longBioParagraphs)
+    ? stripLinks(longBioParagraphs.join('\n\n'))
+    : ''
 
   return (
     <Box sx={styles.root}>
@@ -64,7 +67,7 @@ export default function Page() {
           {Array.isArray(longBioParagraphs) &&
             longBioParagraphs.map((paragraph, i) => (
               <Typography key={i} variant='body1'>
-                {paragraph}
+                {parseLinks(paragraph)}
               </Typography>
             ))}
         </Box>

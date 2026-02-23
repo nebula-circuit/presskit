@@ -18,10 +18,16 @@ interface ReleaseItem {
   image: string
 }
 
+interface SessionItem {
+  title: string
+  url: string
+}
+
 export default function Page() {
   const { t } = useTranslation()
 
   const list = t('pages.releases.list', { returnObjects: true }) as ReleaseItem[]
+  const sessions = t('pages.releases.sessions', { returnObjects: true }) as SessionItem[]
 
   if (!Array.isArray(list)) {
     return null
@@ -81,6 +87,32 @@ export default function Page() {
           </Card>
         ))}
       </Box>
+
+      {Array.isArray(sessions) && sessions.length > 0 && (
+        <Box sx={styles.sessionsSection}>
+          <Typography variant='subtitle1' sx={styles.sessionsTitle}>
+            {t('pages.releases.sessionsTitle')}
+          </Typography>
+
+          {sessions.map((session) => (
+            <Box
+              key={session.url}
+              component='iframe'
+              title={session.title}
+              src={scEmbedSrc(session.url)}
+              allow='autoplay'
+              loading='lazy'
+              sx={styles.embed}
+              height={166}
+            />
+          ))}
+        </Box>
+      )}
     </Box>
   )
+}
+
+// Aux
+function scEmbedSrc(trackUrl: string) {
+  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(trackUrl)}&color=%2300e5ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`
 }

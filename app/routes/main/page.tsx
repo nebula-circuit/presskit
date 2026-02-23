@@ -10,11 +10,11 @@ import Tabs from '@mui/material/Tabs'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { useTranslation } from 'react-i18next'
-import { SiDiscogs, SiInstagram, SiSoundcloud } from 'react-icons/si'
-import { Routes } from '../../routes'
-import NavDrawer from '../../components/drawer/drawer'
-import LanguageSwitch from '../../components/language-switch/language-switch'
-import { useIsMobile } from '../../hooks/use-is-mobile'
+import { Routes } from '@/routes'
+import NavDrawer from '@/components/drawer/drawer'
+import LanguageSwitch from '@/components/language-switch/language-switch'
+import { useIsMobile } from '@/hooks/use-is-mobile'
+import { socialLinks } from '@/config/const'
 import { styles } from './style'
 
 const navItems = Object.values(Routes)
@@ -25,6 +25,7 @@ const navKeys: Record<string, string> = {
   [Routes.LIVE_SETUP]: 'nav.liveSetup',
   [Routes.GALLERY]: 'nav.gallery',
   [Routes.TECHNICAL_RIDER]: 'nav.technicalRider',
+  [Routes.CONTACT]: 'nav.contact',
 }
 
 export default function Page() {
@@ -52,24 +53,6 @@ export default function Page() {
   const handleTabChange = (_: SyntheticEvent, newValue: number) => {
     navigate(navItems[newValue])
   }
-
-  const footerLinks = [
-    {
-      label: t('footer.instagram'),
-      href: 'https://instagram.com/nebulacircuit',
-      Icon: SiInstagram,
-    },
-    {
-      label: t('footer.soundcloud'),
-      href: 'https://soundcloud.com/nebulacircuit',
-      Icon: SiSoundcloud,
-    },
-    {
-      label: t('footer.discogs'),
-      href: 'https://www.discogs.com/artist/16008693-Nebula-Circuit',
-      Icon: SiDiscogs,
-    },
-  ]
 
   return (
     <Box sx={styles.layout}>
@@ -144,13 +127,13 @@ export default function Page() {
       </Box>
 
       <Box component='footer' sx={styles.footer}>
-        {footerLinks.map((link) => {
+        {socialLinks.map((link) => {
           const Icon = link.Icon
 
           return (
             <a key={link.href} href={link.href} target='_blank' rel='noopener noreferrer'>
               <Icon size={20} aria-hidden />
-              {link.label}
+              {t(link.label)}
             </a>
           )
         })}
