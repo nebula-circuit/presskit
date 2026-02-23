@@ -4,7 +4,6 @@ import IconButton from '@mui/material/IconButton'
 import EmailOutlined from '@mui/icons-material/EmailOutlined'
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard'
 import { useTranslation } from 'react-i18next'
-import { SiDiscogs, SiInstagram, SiSoundcloud } from 'react-icons/si'
 import { socialLinks } from '@/config/const'
 import { styles } from './style'
 

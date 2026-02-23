@@ -1,41 +1,16 @@
-# Material UI - React Router example in TypeScript
+# Nebula Circuit — Presskit
 
-## How to use
+**Nebula Circuit** presskit, a Dark Electro project based in Alcoy (Valencia, Spain)
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+Live at: **https://nebula-circuit.github.io/presskit/intro**
 
-<!-- #target-branch-reference -->
+## Stack
 
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/material-ui-react-router-ts
-cd material-ui-react-router-ts
-```
+React Router 7, Material UI 7, i18next (ES/EN), deployed to GitHub Pages
 
-Install it and run:
+## Development
 
 ```bash
 pnpm install
 pnpm dev
 ```
-
-or:
-
-<!-- #target-branch-reference -->
-
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/mui/material-ui/tree/master/examples/material-ui-react-router-ts)
-
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-react-router-ts)
-
-## The idea behind the example
-
-<!-- #host-reference -->
-
-This example demonstrates how you can use Material UI with [React Router](https://reactrouter.com/) in [TypeScript](https://github.com/Microsoft/TypeScript).
-It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in Material UI.
-
-## What's next?
-
-<!-- #host-reference -->
-
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://next.mui.com/material-ui/getting-started/templates/) section.
