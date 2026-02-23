@@ -10,6 +10,10 @@ export const styles = {
     alignSelf: 'flex-end',
     mb: 3,
     textTransform: 'none',
+    '&.Mui-disabled': {
+      borderColor: 'divider',
+      color: 'text.secondary',
+    },
   },
   grid: {
     columnCount: { xs: 1, sm: 2 },
@@ -35,5 +39,10 @@ export const styles = {
     borderRadius: 8,
     px: 3,
     zIndex: 1100,
+    '&.Mui-disabled': {
+      bgcolor: 'primary.main',
+      color: 'text.secondary',
+      opacity: 0.6,
+    },
   },
 }

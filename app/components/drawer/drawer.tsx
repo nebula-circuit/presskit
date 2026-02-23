@@ -18,6 +18,7 @@ const navKeys: Record<string, string> = {
   [Routes.LIVE_SETUP]: 'nav.liveSetup',
   [Routes.GALLERY]: 'nav.gallery',
   [Routes.TECHNICAL_RIDER]: 'nav.technicalRider',
+  [Routes.CONTACT]: 'nav.contact',
 }
 
 interface NavDrawerProps {

@@ -5,15 +5,16 @@ export const styles = {
     pr: { xs: 1, sm: 2 },
   },
   title: {
-    flexGrow: 1,
+    flexShrink: 0,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'baseline',
     gap: 1,
+    mr: { xs: 0, sm: 2 },
+    whiteSpace: 'nowrap',
   },
   titleText: {
     cursor: 'pointer',
-    display: 'inline-block',
     fontWeight: 600,
   },
   titleSubtitle: {
@@ -21,6 +22,7 @@ export const styles = {
     fontSize: '0.7rem',
     opacity: 0.85,
     letterSpacing: '0.1em',
+    display: { xs: 'inline', sm: 'none', md: 'inline' },
   },
   navMobileButton: {
     ml: 'auto',
@@ -29,10 +31,11 @@ export const styles = {
   },
   navButtonsContainer: {
     display: { xs: 'none', sm: 'block' },
+    ml: 'auto',
   },
   languageSwitchContainer: {
-    mr: 'auto',
     ml: { xs: 0, sm: 2 },
+    flexShrink: 0,
   },
   mainContainer: {
     flex: 1,
