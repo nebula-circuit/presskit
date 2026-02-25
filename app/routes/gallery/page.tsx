@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
+import Skeleton from '@mui/material/Skeleton'
 import Download from '@mui/icons-material/Download'
 import CircularProgress from '@mui/material/CircularProgress'
 import { useTranslation } from 'react-i18next'
@@ -10,6 +11,17 @@ interface GalleryImage {
   src: string
   alt: string
 }
+
+const IMAGE_RATIOS = [
+  '3024 / 4032',
+  '3025 / 4538',
+  '3024 / 4032',
+  '3024 / 4032',
+  '2268 / 4032',
+  '2268 / 4032',
+  '2268 / 4032',
+  '3024 / 4537',
+]
 
 const DOWNLOAD_FILES = [
   'nebula-circuit-1.jpg',
@@ -29,6 +41,11 @@ export default function Page() {
   const images = t('pages.gallery.images', { returnObjects: true }) as GalleryImage[]
 
   const [loading, setLoading] = useState(false)
+  const [loaded, setLoaded] = useState<Set<number>>(() => new Set())
+
+  const handleImageLoad = (idx: number) => {
+    setLoaded((prev) => new Set(prev).add(idx))
+  }
 
   const handleDownload = async () => {
     setLoading(true)
@@ -59,13 +76,28 @@ export default function Page() {
       <Box sx={styles.grid}>
         {Array.isArray(images) &&
           images.map((img, idx) => (
-            <Box key={idx} sx={styles.item}>
+            <Box
+              key={idx}
+              sx={{ ...styles.item, aspectRatio: IMAGE_RATIOS[idx] }}
+            >
+              {!loaded.has(idx) && (
+                <Skeleton
+                  variant='rounded'
+                  animation='wave'
+                  sx={styles.skeleton}
+                />
+              )}
+
               <Box
                 component='img'
                 src={`${import.meta.env.BASE_URL}${img.src.replace(/^\//, '')}`}
                 alt={img.alt}
                 loading={idx < 2 ? 'eager' : 'lazy'}
-                sx={styles.image}
+                onLoad={() => handleImageLoad(idx)}
+                sx={{
+                  ...styles.image,
+                  opacity: loaded.has(idx) ? 1 : 0,
+                }}
               />
             </Box>
           ))}

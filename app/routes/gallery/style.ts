@@ -20,6 +20,7 @@ export const styles = {
     columnGap: 2,
   },
   item: {
+    position: 'relative',
     breakInside: 'avoid',
     mb: 2,
   },
@@ -27,10 +28,14 @@ export const styles = {
     width: '100%',
     display: 'block',
     borderRadius: 1,
+    transition: 'opacity 0.3s ease-in',
+  },
+  skeleton: {
+    position: 'absolute', inset: 0, height: '100%', borderRadius: 1
   },
   fab: {
     position: 'fixed',
-    bottom: 64,
+    bottom: 96,
     left: '50%',
     transform: 'translateX(-50%)',
     display: { xs: 'flex', sm: 'none' },
