@@ -17,6 +17,9 @@ const DOWNLOAD_FILES = [
   'nebula-circuit-3.jpg',
   'nebula-circuit-4.jpg',
   'nebula-circuit-5.jpg',
+  'nebula-circuit-6.jpg',
+  'nebula-circuit-7.jpg',
+  'nebula-circuit-8.jpg',
   'nebula-circuit-live-setup-diagram.jpeg',
 ]
 

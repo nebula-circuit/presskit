@@ -61,7 +61,7 @@ export default function Page() {
         <Toolbar sx={styles.toolbar}>
           <Box sx={styles.title}>
             <Typography
-              variant={isMobile ? 'subtitle1' : 'h6'}
+              variant='h5'
               color='primary'
               sx={styles.titleText}
               onClick={handleGoToAbout}

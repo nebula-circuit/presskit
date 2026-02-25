@@ -19,7 +19,7 @@ export const styles = {
       backgroundImage: `url(${BG_IMAGE})`,
       backgroundSize: '60%',
       backgroundPosition: 'center',
-      filter: 'grayscale(100%)',
+      transform: 'translateY(-60%) scale(2.4)',
       zIndex: 0,
       [theme.breakpoints.down('sm')]: {
         backgroundSize: '160%',
@@ -28,9 +28,11 @@ export const styles = {
     '&::after': {
       content: '""',
       position: 'absolute',
-      inset: 0,
-      background:
-        'linear-gradient(to top, rgba(10,11,15,0.95) 0%, rgba(10,11,15,0.5) 40%, transparent 100%)',
+      left: 0,
+      right: 0,
+      bottom: 0,
+      height: '60%',
+      background: `linear-gradient(to top, ${theme.palette.background.default} 0%, transparent 100%)`,
       pointerEvents: 'none',
       zIndex: 1,
     },
@@ -54,7 +56,7 @@ export const styles = {
     px: 2,
     pt: 2,
     pb: 4,
-    mt: { xs: 0, md: -4 },
+    mt: -10,
     position: 'relative',
     zIndex: 1,
   },

@@ -85,7 +85,10 @@
         { "src": "/assets/img/gallery-2.webp", "alt": "Nebula Circuit image 2" },
         { "src": "/assets/img/gallery-3.webp", "alt": "Nebula Circuit image 3" },
         { "src": "/assets/img/gallery-4.webp", "alt": "Nebula Circuit image 4" },
-        { "src": "/assets/img/gallery-5.webp", "alt": "Nebula Circuit image 5" }
+        { "src": "/assets/img/gallery-5.webp", "alt": "Nebula Circuit image 5" },
+        { "src": "/assets/img/gallery-6.webp", "alt": "Nebula Circuit image 6" },
+        { "src": "/assets/img/gallery-7.webp", "alt": "Nebula Circuit image 7" },
+        { "src": "/assets/img/gallery-8.webp", "alt": "Nebula Circuit image 8" }
       ]
     },
     "technicalRider": {
