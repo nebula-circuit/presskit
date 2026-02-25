@@ -31,7 +31,10 @@ export const styles = {
     transition: 'opacity 0.3s ease-in',
   },
   skeleton: {
-    position: 'absolute', inset: 0, height: '100%', borderRadius: 1
+    position: 'absolute',
+    inset: 0,
+    height: '100%',
+    borderRadius: 1,
   },
   fab: {
     position: 'fixed',

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Skeleton from '@mui/material/Skeleton'
@@ -76,16 +76,9 @@ export default function Page() {
       <Box sx={styles.grid}>
         {Array.isArray(images) &&
           images.map((img, idx) => (
-            <Box
-              key={idx}
-              sx={{ ...styles.item, aspectRatio: IMAGE_RATIOS[idx] }}
-            >
+            <Box key={idx} sx={{ ...styles.item, aspectRatio: IMAGE_RATIOS[idx] }}>
               {!loaded.has(idx) && (
-                <Skeleton
-                  variant='rounded'
-                  animation='wave'
-                  sx={styles.skeleton}
-                />
+                <Skeleton variant='rounded' animation='wave' sx={styles.skeleton} />
               )}
 
               <Box
