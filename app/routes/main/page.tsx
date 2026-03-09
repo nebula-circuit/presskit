@@ -97,10 +97,7 @@ export default function Page() {
             sx={styles.navButtonsContainer}
           >
             {navItems.map((item) => (
-              <Tab
-                key={item}
-                label={t(navKeys[item] ?? item)}
-              />
+              <Tab key={item} label={t(navKeys[item] ?? item)} />
             ))}
           </Tabs>
 
