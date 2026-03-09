@@ -1,4 +1,4 @@
-import { type SyntheticEvent, useState } from 'react'
+import { type SyntheticEvent, Suspense, useState } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -123,7 +123,9 @@ export default function Page() {
 
       <Box component='main' sx={styles.mainContainer}>
         <Toolbar />
-        <Outlet />
+        <Suspense>
+          <Outlet />
+        </Suspense>
       </Box>
 
       <Box component='footer' sx={styles.footer}>

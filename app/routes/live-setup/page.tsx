@@ -13,6 +13,7 @@ export default function Page() {
         component='img'
         src={`${import.meta.env.BASE_URL}${String(t('pages.liveSetup.image')).replace(/^\//, '')}`}
         alt='Live setup'
+        loading='lazy'
         sx={styles.image}
       />
 

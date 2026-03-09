@@ -49,6 +49,7 @@ export default function Page() {
                   component='img'
                   image={`${import.meta.env.BASE_URL}${release.image.replace(/^\//, '')}`}
                   alt={release.title}
+                  loading='lazy'
                   sx={styles.media}
                   onError={(e) => {
                     const target = e.target as HTMLImageElement
