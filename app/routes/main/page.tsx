@@ -96,11 +96,9 @@ export default function Page() {
             aria-label='navigation tabs'
             sx={styles.navButtonsContainer}
           >
-            {navItems.map((item, idx) => (
+            {navItems.map((item) => (
               <Tab
                 key={item}
-                id={`nav-tab-${idx}`}
-                aria-controls={`nav-tabpanel-${idx}`}
                 label={t(navKeys[item] ?? item)}
               />
             ))}
@@ -134,7 +132,7 @@ export default function Page() {
 
           return (
             <a key={link.href} href={link.href} target='_blank' rel='noopener noreferrer'>
-              <Icon size={20} aria-hidden />
+              <Icon size={20} aria-hidden='true' />
               {t(link.label)}
             </a>
           )

@@ -9,6 +9,11 @@ import './i18n'
 
 import type { Route } from './+types/root'
 
+export const meta: Route.MetaFunction = () => [
+  { title: 'Nebula Circuit Presskit' },
+  { name: 'description', content: 'Electronic music artist presskit' },
+]
+
 export const links: Route.LinksFunction = () => [
   {
     rel: 'icon',
@@ -22,15 +27,18 @@ export const links: Route.LinksFunction = () => [
     sizes: '64x64',
     href: `${import.meta.env.BASE_URL}favicon-64.png`,
   },
-  { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
-    rel: 'preconnect',
-    href: 'https://fonts.gstatic.com',
+    rel: 'preload',
+    href: `${import.meta.env.BASE_URL}assets/fonts/JetBrainsMono-latin.woff2`,
+    as: 'font',
+    type: 'font/woff2',
     crossOrigin: 'anonymous',
   },
   {
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap',
+    rel: 'preload',
+    href: `${import.meta.env.BASE_URL}assets/img/gallery-4.webp`,
+    as: 'image',
+    type: 'image/webp',
   },
 ]
 
