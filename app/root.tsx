@@ -9,9 +9,18 @@ import './i18n'
 
 import type { Route } from './+types/root'
 
+const SITE_URL = 'https://nebula-circuit.github.io/presskit'
+const DESCRIPTION =
+  'Nebula Circuit — Dark Electro artist based in Alcoy (Valencia). Presskit with bio, releases, live setup, technical rider and contact.'
+
 export const meta: Route.MetaFunction = () => [
   { title: 'Nebula Circuit Presskit' },
-  { name: 'description', content: 'Electronic music artist presskit' },
+  { name: 'description', content: DESCRIPTION },
+  { property: 'og:type', content: 'website' },
+  { property: 'og:title', content: 'Nebula Circuit Presskit' },
+  { property: 'og:description', content: DESCRIPTION },
+  { property: 'og:image', content: `${SITE_URL}/assets/img/gallery-1.webp` },
+  { property: 'og:url', content: SITE_URL },
 ]
 
 export const links: Route.LinksFunction = () => [

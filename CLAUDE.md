@@ -9,6 +9,7 @@ Presskit site for "Nebula Circuit" (electronic music artist). Built with React R
 ## Commands
 
 ```bash
+pnpm setup        # Install deps (uses --ignore-workspace)
 pnpm dev          # Start dev server with HMR
 pnpm build        # Production build (output: /build)
 pnpm typecheck    # react-router typegen && tsc
@@ -18,11 +19,13 @@ pnpm format       # Prettier
 
 For GitHub Pages build: `GITHUB_PAGES=true pnpm build` (sets basename to `/presskit/`).
 
+A Husky pre-commit hook runs `lint-staged` (prettier + eslint on staged files) and `typecheck` on every commit. `pnpm format:check` is available for CI validation.
+
 ## Architecture
 
 ### Routing
 
-Routes are defined in `app/routes.ts` using React Router's config API (`layout()`, `route()`, `index()`). All pages share the `routes/main/page.tsx` layout (AppBar, Drawer, Footer). Route constants live in `app/routes.ts` as the `Routes` enum.
+Routes are defined in `app/routes.ts` using React Router's config API (`layout()`, `route()`, `index()`). All pages share the `routes/main/page.tsx` layout (AppBar, Drawer, Footer). Route path constants live in the `Routes` object (`as const`) in `app/routes.ts`.
 
 SSR is disabled (`ssr: false` in `react-router.config.ts`) — this is a client-side SPA.
 
@@ -46,6 +49,10 @@ Reusable components are in `app/components/` (drawer, language-switch). Custom h
 ### Static Assets
 
 Public assets live in `public/assets/`. Image paths are referenced via `import.meta.env.BASE_URL` (changes between local dev and GitHub Pages deployment). Images are WebP format.
+
+### Build Notes
+
+`vite.config.ts` includes a custom `muiJsxPlugin` to handle MUI packages that ship `.js` files containing JSX. This is required for Vite's import analysis to work with MUI 7.
 
 ## Code Conventions
 
