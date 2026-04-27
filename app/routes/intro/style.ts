@@ -84,7 +84,4 @@ export const styles = {
   shortBioText: {
     whiteSpace: 'pre-line',
   },
-  longBioSection: {
-    '& > p': { mb: 2 },
-  },
 }
