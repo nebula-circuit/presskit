@@ -31,13 +31,22 @@
       ],
       "list": [
         {
-          "id": "scars",
-          "title": "Scars On A D. Mind",
-          "label": "Fill-Lex Records",
-          "date": "6 diciembre 2024",
-          "description": "EP en cassette y digital. Downtempo, leftfield y electro con esencia oscura. Cinco cortes incluyendo bonus digital.",
-          "url": "https://fill-lexrecords.bandcamp.com/album/scars-on-a-digital-mind",
-          "image": "/assets/img/scars-on-a-digital-mind.webp"
+          "id": "cold-stream",
+          "title": "Cold Stream",
+          "label": "B L A D E",
+          "date": "29 abril 2026",
+          "description": "EP digital. Cinco tracks de electro crudo, machine funk y tensión EBM. Incluye remix de Dark Vektor.",
+          "url": "https://blade666.bandcamp.com/album/cold-stream",
+          "image": "/assets/img/cold-stream.webp"
+        },
+        {
+          "id": "synthetic",
+          "title": "Synthetic Resistance",
+          "label": "Raw Planet",
+          "date": "23 diciembre 2025",
+          "description": "EP digital. Tres temas de electro profundo y atmósferas sólidas.",
+          "url": "https://rawplanet.bandcamp.com/album/synthetic-resistance-rwplnt-005",
+          "image": "/assets/img/synthetic-resistance.webp"
         },
         {
           "id": "talisman",
@@ -49,13 +58,13 @@
           "image": "/assets/img/talisman.webp"
         },
         {
-          "id": "synthetic",
-          "title": "Synthetic Resistance",
-          "label": "Raw Planet",
-          "date": "23 diciembre 2025",
-          "description": "EP digital. Tres temas de electro profundo y atmósferas sólidas.",
-          "url": "https://rawplanet.bandcamp.com/album/synthetic-resistance-rwplnt-005",
-          "image": "/assets/img/synthetic-resistance.webp"
+          "id": "scars",
+          "title": "Scars On A D. Mind",
+          "label": "Fill-Lex Records",
+          "date": "6 diciembre 2024",
+          "description": "EP en cassette y digital. Downtempo, leftfield y electro con esencia oscura. Cinco cortes incluyendo bonus digital.",
+          "url": "https://fill-lexrecords.bandcamp.com/album/scars-on-a-digital-mind",
+          "image": "/assets/img/scars-on-a-digital-mind.webp"
         }
       ]
     },
