@@ -43,12 +43,6 @@ export const links: Route.LinksFunction = () => [
     type: 'font/woff2',
     crossOrigin: 'anonymous',
   },
-  {
-    rel: 'preload',
-    href: `${import.meta.env.BASE_URL}assets/img/gallery-4.webp`,
-    as: 'image',
-    type: 'image/webp',
-  },
 ]
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -60,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <InitColorSchemeScript defaultMode='dark' />
         {children}
         <ScrollRestoration />

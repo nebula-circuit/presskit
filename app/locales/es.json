@@ -7,6 +7,7 @@
     "releases": "Releases",
     "liveSetup": "Live setup",
     "gallery": "Galería",
+    "videos": "Videos",
     "technicalRider": "Rider técnico",
     "contact": "Contacto"
   },
@@ -97,6 +98,18 @@
         { "src": "/assets/img/gallery-6.webp", "alt": "Nebula Circuit imagen 6" },
         { "src": "/assets/img/gallery-7.webp", "alt": "Nebula Circuit imagen 7" },
         { "src": "/assets/img/gallery-8.webp", "alt": "Nebula Circuit imagen 8" }
+      ]
+    },
+    "videos": {
+      "title": "Videos",
+      "download": "Descargar videos en alta resolución",
+      "downloadShort": "Descargar videos",
+      "downloading": "Descargando...",
+      "items": [
+        { "src": "/assets/video/nebula-circuit-1.mp4", "label": "Nebula Circuit video 1" },
+        { "src": "/assets/video/nebula-circuit-2.mp4", "label": "Nebula Circuit video 2" },
+        { "src": "/assets/video/nebula-circuit-3.mp4", "label": "Nebula Circuit video 3" },
+        { "src": "/assets/video/nebula-circuit-4.mp4", "label": "Nebula Circuit video 4" }
       ]
     },
     "technicalRider": {

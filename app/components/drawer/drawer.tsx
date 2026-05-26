@@ -17,6 +17,7 @@ const navKeys: Record<string, string> = {
   [Routes.RELEASES]: 'nav.releases',
   [Routes.LIVE_SETUP]: 'nav.liveSetup',
   [Routes.GALLERY]: 'nav.gallery',
+  [Routes.VIDEOS]: 'nav.videos',
   [Routes.TECHNICAL_RIDER]: 'nav.technicalRider',
   [Routes.CONTACT]: 'nav.contact',
 }

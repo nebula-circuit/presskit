@@ -5,6 +5,7 @@ export const Routes = {
   RELEASES: 'releases',
   LIVE_SETUP: 'live-setup',
   GALLERY: 'gallery',
+  VIDEOS: 'videos',
   TECHNICAL_RIDER: 'technical-rider',
   CONTACT: 'contact',
 } as const
@@ -16,6 +17,7 @@ export default [
     route(Routes.RELEASES, 'routes/releases/page.tsx'),
     route(Routes.LIVE_SETUP, 'routes/live-setup/page.tsx'),
     route(Routes.GALLERY, 'routes/gallery/page.tsx'),
+    route(Routes.VIDEOS, 'routes/videos/page.tsx'),
     route(Routes.TECHNICAL_RIDER, 'routes/technical-rider/page.tsx'),
     route(Routes.CONTACT, 'routes/contact/page.tsx'),
   ]),
