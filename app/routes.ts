@@ -1,24 +1,12 @@
-import { type RouteConfig, index, layout, route } from '@react-router/dev/routes'
-
-export const Routes = {
-  INTRO: 'intro',
-  RELEASES: 'releases',
-  LIVE_SETUP: 'live-setup',
-  GALLERY: 'gallery',
-  VIDEOS: 'videos',
-  TECHNICAL_RIDER: 'technical-rider',
-  CONTACT: 'contact',
-} as const
+import { type RouteConfig, index, route } from '@react-router/dev/routes'
+import { LEGACY_REDIRECTS } from './legacy-redirects'
 
 export default [
-  layout('routes/main/page.tsx', [
-    index('routes/main/index.tsx'),
-    route(Routes.INTRO, 'routes/intro/page.tsx'),
-    route(Routes.RELEASES, 'routes/releases/page.tsx'),
-    route(Routes.LIVE_SETUP, 'routes/live-setup/page.tsx'),
-    route(Routes.GALLERY, 'routes/gallery/page.tsx'),
-    route(Routes.VIDEOS, 'routes/videos/page.tsx'),
-    route(Routes.TECHNICAL_RIDER, 'routes/technical-rider/page.tsx'),
-    route(Routes.CONTACT, 'routes/contact/page.tsx'),
-  ]),
+  index('routes/home/page.tsx', { id: 'home-es' }),
+  route('en', 'routes/home/page.tsx', { id: 'home-en' }),
+  route('rider', 'routes/rider/page.tsx', { id: 'rider-es' }),
+  route('en/rider', 'routes/rider/page.tsx', { id: 'rider-en' }),
+  ...Object.keys(LEGACY_REDIRECTS).map((slug) =>
+    route(slug, 'routes/legacy-redirect.tsx', { id: `legacy-${slug}` })
+  ),
 ] satisfies RouteConfig

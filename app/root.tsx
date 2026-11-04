@@ -1,61 +1,42 @@
-import * as React from 'react'
-import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router'
-import { CacheProvider } from '@emotion/react'
-import Box from '@mui/material/Box'
-import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
-import AppTheme from './theme'
-import createEmotionCache from './createCache'
-import './i18n'
+import type { ReactNode } from 'react'
+import {
+  isRouteErrorResponse,
+  Link,
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useLocation,
+} from 'react-router'
+import fontLatin from './assets/fonts/JetBrainsMono-latin.woff2?url'
+import { getDict, langFromPath, localePath } from './i18n'
+import './styles/global.css'
 
 import type { Route } from './+types/root'
 
-const SITE_URL = 'https://nebula-circuit.github.io/presskit'
-const DESCRIPTION =
-  'Nebula Circuit — Dark Electro artist based in Alcoy (Valencia). Presskit with bio, releases, live setup, technical rider and contact.'
-
-export const meta: Route.MetaFunction = () => [
-  { title: 'Nebula Circuit Presskit' },
-  { name: 'description', content: DESCRIPTION },
-  { property: 'og:type', content: 'website' },
-  { property: 'og:title', content: 'Nebula Circuit Presskit' },
-  { property: 'og:description', content: DESCRIPTION },
-  { property: 'og:image', content: `${SITE_URL}/assets/img/gallery-1.webp` },
-  { property: 'og:url', content: SITE_URL },
-]
+const base = import.meta.env.BASE_URL
 
 export const links: Route.LinksFunction = () => [
-  {
-    rel: 'icon',
-    type: 'image/png',
-    sizes: '32x32',
-    href: `${import.meta.env.BASE_URL}favicon-32.png`,
-  },
-  {
-    rel: 'icon',
-    type: 'image/png',
-    sizes: '64x64',
-    href: `${import.meta.env.BASE_URL}favicon-64.png`,
-  },
-  {
-    rel: 'preload',
-    href: `${import.meta.env.BASE_URL}assets/fonts/JetBrainsMono-latin.woff2`,
-    as: 'font',
-    type: 'font/woff2',
-    crossOrigin: 'anonymous',
-  },
+  { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32.png` },
+  { rel: 'icon', type: 'image/png', sizes: '64x64', href: `${base}favicon-64.png` },
+  { rel: 'apple-touch-icon', href: `${base}apple-touch-icon.png` },
+  { rel: 'preload', href: fontLatin, as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
 ]
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: ReactNode }) {
+  const { pathname } = useLocation()
+
   return (
-    <html lang='es' suppressHydrationWarning>
+    <html lang={langFromPath(pathname)}>
       <head>
         <meta charSet='utf-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
+        <meta name='theme-color' content='#0a0b0f' />
         <Meta />
         <Links />
       </head>
-      <body suppressHydrationWarning>
-        <InitColorSchemeScript defaultMode='dark' />
+      <body>
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -64,48 +45,27 @@ export function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
-const cache = createEmotionCache()
-
 export default function App() {
-  if (typeof window !== 'undefined') {
-    return (
-      <CacheProvider value={cache}>
-        <AppTheme>
-          <Outlet />
-        </AppTheme>
-      </CacheProvider>
-    )
-  }
-  return (
-    <AppTheme>
-      <Outlet />
-    </AppTheme>
-  )
+  return <Outlet />
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = 'Oops!'
-  let details = 'An unexpected error occurred.'
-  let stack: string | undefined
+  const lang = langFromPath(useLocation().pathname)
+  const t = getDict(lang).error
 
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? '404' : 'Error'
-    details =
-      error.status === 404 ? 'The requested page could not be found.' : error.statusText || details
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message
-    stack = error.stack
-  }
+  const notFound = isRouteErrorResponse(error) && error.status === 404
+  const stack = import.meta.env.DEV && error instanceof Error ? error.stack : undefined
 
   return (
-    <Box component='main' sx={{ pt: 8, p: 2, maxWidth: 'lg', mx: 'auto' }}>
-      <h1>{message}</h1>
-      <p>{details}</p>
+    <main className='error-page'>
+      <p className='error-page__code'>{notFound ? '404' : t.generic}</p>
+      <h1>{notFound ? t.notFound : t.unexpected}</h1>
+      <Link to={localePath(lang)}>{t.home}</Link>
       {stack && (
-        <Box component='pre' sx={{ width: '100%', p: 2, overflowX: 'auto' }}>
+        <pre>
           <code>{stack}</code>
-        </Box>
+        </pre>
       )}
-    </Box>
+    </main>
   )
 }

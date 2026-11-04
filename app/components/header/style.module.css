@@ -1,0 +1,44 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgb(10 11 15 / 0.94);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: var(--max);
+  height: var(--header-h);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  margin-right: auto;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brandName {
+  color: var(--cyan);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.brandSub {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 359.98px) {
+  .brandSub {
+    display: none;
+  }
+}

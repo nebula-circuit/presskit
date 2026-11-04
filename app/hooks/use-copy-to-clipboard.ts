@@ -1,25 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export function useCopyToClipboard() {
-  const [copiedWhich, setCopiedWhich] = useState<'short' | 'long' | null>(null)
+  const [copied, setCopied] = useState(false)
+  const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
-  const copyToClipboard = async (text: string, which: 'short' | 'long') => {
+  useEffect(() => () => clearTimeout(timer.current), [])
+
+  const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text)
-      setCopiedWhich(which)
-      setTimeout(() => setCopiedWhich(null), 2000)
     } catch {
-      // NOTE: Fallback for older browsers
+      // NOTE: Fallback for browsers without async clipboard (or insecure contexts)
       const ta = document.createElement('textarea')
       ta.value = text
       document.body.appendChild(ta)
       ta.select()
       document.execCommand('copy')
       document.body.removeChild(ta)
-      setCopiedWhich(which)
-      setTimeout(() => setCopiedWhich(null), 2000)
     }
+    setCopied(true)
+    clearTimeout(timer.current)
+    timer.current = setTimeout(() => setCopied(false), 2000)
   }
 
-  return { copyToClipboard, copiedWhich }
+  return { copyToClipboard, copied }
 }

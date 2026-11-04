@@ -127,6 +127,8 @@
   "downloads": {
     "photos": {
       "file": "downloads/nebula-circuit-press-photos.zip",
+      "dir": "assets/download-img",
+      "keepSources": true,
       "files": [
         "nebula-circuit-1.jpg",
         "nebula-circuit-2.jpg",
@@ -142,6 +144,8 @@
     },
     "videos": {
       "file": "downloads/nebula-circuit-press-videos.zip",
+      "dir": "assets/download-video",
+      "keepSources": false,
       "files": [
         "nebula-circuit-1.mp4",
         "nebula-circuit-2.mp4",

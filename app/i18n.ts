@@ -1,38 +1,40 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
+import { useLocation } from 'react-router'
 import en from './locales/en.json'
 import es from './locales/es.json'
 
-const LANG_KEY = 'app-lang'
-
 export const languages = ['es', 'en'] as const
 export type Language = (typeof languages)[number]
+export type Dict = typeof es
 
-const stored = typeof window !== 'undefined' ? localStorage.getItem(LANG_KEY) : null
-const defaultLang: Language =
-  stored && languages.includes(stored as Language) ? (stored as Language) : 'es'
+const dicts: Record<Language, Dict> = { es, en }
 
-export const languageNames: Record<Language, string> = {
-  en: 'English',
-  es: 'Español',
+// Spanish lives at the root, English under /en
+export function langFromPath(pathname: string): Language {
+  return /^\/en(\/|$)/.test(pathname) ? 'en' : 'es'
 }
 
-i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: en },
-    es: { translation: es },
-  },
-  lng: defaultLang,
-  fallbackLng: 'es',
-  interpolation: {
-    escapeValue: false,
-  },
-})
-
-export function setStoredLanguage(lng: Language) {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem(LANG_KEY, lng)
-  }
+/** Path without the language prefix, e.g. `/en/rider` → `/rider` */
+export function stripLang(pathname: string) {
+  return pathname.replace(/^\/en(?=\/|$)/, '') || '/'
 }
 
-export default i18n
+export function localePath(lang: Language, path = '/') {
+  if (lang === 'es') return path
+  return path === '/' ? '/en' : `/en${path}`
+}
+
+export function getDict(lang: Language) {
+  return dicts[lang]
+}
+
+export function useLang() {
+  return langFromPath(useLocation().pathname)
+}
+
+export function useT() {
+  return dicts[useLang()]
+}
+
+export function format(template: string, vars: Record<string, string | number>) {
+  return template.replace(/\{(\w+)\}/g, (_, key: string) => String(vars[key] ?? ''))
+}

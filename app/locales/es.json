@@ -1,156 +1,168 @@
 {
+  "meta": {
+    "title": "Nebula Circuit — Presskit",
+    "description": "Nebula Circuit — artista de dark electro de Alcoy (Valencia). Presskit con bio, releases, fotos, vídeos, live setup, rider técnico y contacto.",
+    "riderTitle": "Nebula Circuit — Live setup y rider técnico",
+    "riderDescription": "Live setup de hardware y rider técnico de Nebula Circuit: PA, conexiones, escenario y llegada.",
+    "locale": "es_ES"
+  },
   "nav": {
     "brand": "NEBULA CIRCUIT",
     "subtitle": "presskit",
-    "openDrawer": "Abrir menú",
-    "intro": "Intro",
-    "releases": "Releases",
-    "liveSetup": "Live setup",
-    "gallery": "Galería",
-    "videos": "Videos",
-    "technicalRider": "Rider técnico",
+    "label": "Secciones",
+    "bio": "Bio",
+    "music": "Música",
+    "media": "Media",
+    "rider": "Rider",
     "contact": "Contacto"
   },
   "language": {
     "label": "Idioma",
-    "switchTo": "Cambiar idioma"
+    "names": { "es": "Español", "en": "English" }
   },
-  "pages": {
-    "intro": {
-      "bioTitle": "Biografía",
-      "copyBio": "Copiar",
-      "copied": "Copiado!"
-    },
-    "releases": {
-      "listenOnBandcamp": "Escuchar en Bandcamp",
-      "sessionsTitle": "Live sessions",
-      "sessions": [
-        {
-          "title": "SAT 002",
-          "url": "https://soundcloud.com/nebulacircuit/sat-002-nebula-circuit-live"
-        }
-      ],
-      "list": [
-        {
-          "id": "cold-stream",
-          "title": "Cold Stream",
-          "label": "B L A D E",
-          "date": "29 abril 2026",
-          "description": "EP digital. Cinco tracks de electro crudo, machine funk y tensión EBM. Incluye remix de Dark Vektor.",
-          "url": "https://blade666.bandcamp.com/album/cold-stream",
-          "image": "/assets/img/cold-stream.webp"
-        },
-        {
-          "id": "synthetic",
-          "title": "Synthetic Resistance",
-          "label": "Raw Planet",
-          "date": "23 diciembre 2025",
-          "description": "EP digital. Tres temas de electro profundo y atmósferas sólidas.",
-          "url": "https://rawplanet.bandcamp.com/album/synthetic-resistance-rwplnt-005",
-          "image": "/assets/img/synthetic-resistance.webp"
-        },
-        {
-          "id": "talisman",
-          "title": "Talisman",
-          "label": "BARRO",
-          "date": "16 septiembre 2025",
-          "description": "Vinilo 12\" y digital. EBM, techno y electroclash para la pista. Incluye remixes de Orlok 101 y Abraxas.",
-          "url": "https://barrolabel.bandcamp.com/album/talisman",
-          "image": "/assets/img/talisman.webp"
-        },
-        {
-          "id": "scars",
-          "title": "Scars On A D. Mind",
-          "label": "Fill-Lex Records",
-          "date": "6 diciembre 2024",
-          "description": "EP en cassette y digital. Downtempo, leftfield y electro con esencia oscura. Cinco cortes incluyendo bonus digital.",
-          "url": "https://fill-lexrecords.bandcamp.com/album/scars-on-a-digital-mind",
-          "image": "/assets/img/scars-on-a-digital-mind.webp"
-        }
-      ]
-    },
-    "liveSetup": {
-      "image": "/assets/img/live-setup-diagram.webp",
-      "intro": "Hardware live setup",
-      "darkTrinity": "Analog Rytm (AR) en drums. Analog Four (A4) en bajos, subs, FX y leads. Octatrack (OT) como mixer y disparo de samples",
-      "pill": "The Pill: ducking",
-      "goldenMaster": "Endorphines Golden Master: procesador end-of-chain",
-      "routingTitle": "Signal flow",
-      "routing": [
-        "AR track 1 (kick) → entrada trigger de The Pill",
-        "A4 track 1 (sub-bass) → entrada de audio de The Pill",
-        "Kick → un canal del OT; sub-bass → segundo canal del OT",
-        "Salida principal del A4 → entrada de audio del AR; salida master del AR → tercer canal del OT",
-        "Golden Master al final de la cadena para compresión"
-      ]
-    },
-    "gallery": {
-      "title": "Galería",
-      "download": "Descargar fotos en alta resolución",
-      "downloadShort": "Descargar fotos",
-      "downloading": "Descargando...",
-      "images": [
-        { "src": "/assets/img/gallery-1.webp", "alt": "Nebula Circuit imagen 1" },
-        { "src": "/assets/img/gallery-2.webp", "alt": "Nebula Circuit imagen 2" },
-        { "src": "/assets/img/gallery-3.webp", "alt": "Nebula Circuit imagen 3" },
-        { "src": "/assets/img/gallery-4.webp", "alt": "Nebula Circuit imagen 4" },
-        { "src": "/assets/img/gallery-5.webp", "alt": "Nebula Circuit imagen 5" },
-        { "src": "/assets/img/gallery-6.webp", "alt": "Nebula Circuit imagen 6" },
-        { "src": "/assets/img/gallery-7.webp", "alt": "Nebula Circuit imagen 7" },
-        { "src": "/assets/img/gallery-8.webp", "alt": "Nebula Circuit imagen 8" }
-      ]
-    },
-    "videos": {
-      "title": "Videos",
-      "download": "Descargar videos en alta resolución",
-      "downloadShort": "Descargar videos",
-      "downloading": "Descargando...",
-      "items": [
-        { "src": "/assets/video/nebula-circuit-1.mp4", "label": "Nebula Circuit video 1" },
-        { "src": "/assets/video/nebula-circuit-2.mp4", "label": "Nebula Circuit video 2" },
-        { "src": "/assets/video/nebula-circuit-3.mp4", "label": "Nebula Circuit video 3" },
-        { "src": "/assets/video/nebula-circuit-4.mp4", "label": "Nebula Circuit video 4" }
-      ]
-    },
-    "technicalRider": {
-      "title": "Rider técnico",
-      "general": {
-        "title": "General",
-        "text": "Se requiere un sistema de PA de tamaño adecuado en la sala, con una fuente de alimentación fiable que garantice 100 dB SPL RMS sin distorsión en la mesa de mezclas"
-      },
-      "tech": {
-        "title": "Lo que necesito (técnico)",
-        "items": [
-          "Entradas XLR o balanceadas preferidas sobre RCA para la señal de audio de salida (desde el procesador end-of-chain)",
-          "Rec out",
-          "Monitores"
-        ]
-      },
-      "stage": {
-        "title": "Lo que necesito (escenario)",
-        "text": "100cm × 60cm en una mesa de al menos 110 cm de alto. Se prefiere un ambiente oscuro o luz cálida"
-      },
-      "arrival": {
-        "title": "Llegada",
-        "text": "Por favor, proporcionar indicaciones detalladas, la dirección completa de la sala y un teléfono de contacto. También necesitaré el horario de prueba de sonido, apertura de puertas y hora de salida al escenario. Para la prueba de sonido, 30 minutos deberían ser suficientes"
-      }
-    },
-    "contact": {
-      "title": "Contacto",
-      "email": "nebulacircuit21@gmail.com"
-    }
+  "hero": {
+    "tag": "LIVE · ALCOY",
+    "alt": "Nebula Circuit tocando en directo con su setup de hardware bajo luz azul",
+    "genre": "Dark electro",
+    "location": "Alcoy (Valencia), ES"
   },
   "bio": {
-    "short": "Nebula Circuit es un proyecto de música electrónica centrado en un electro de raíz analógica. Su sonido se construye íntegramente con hardware — cajas de ritmos, sintetizadores y secuencias afiladas — bebiendo del electro old-school, el llamado Hague sound y las primeras olas de EBM. El directo se ejecuta sin ordenadores, con un planteamiento físico y crudo. Cuenta con referencias publicadas en sellos como Blade y Barro, dos espacios afines al circuito actual del electro y el EBM."
+    "title": "Bio",
+    "text": "Nebula Circuit es un proyecto de música electrónica centrado en un electro de raíz analógica. Su sonido se construye íntegramente con hardware — cajas de ritmos, sintetizadores y secuencias afiladas — bebiendo del electro old-school, el llamado Hague sound y las primeras olas de EBM. El directo se ejecuta sin ordenadores, con un planteamiento físico y crudo. Cuenta con referencias publicadas en sellos como Blade y Barro, dos espacios afines al circuito actual del electro y el EBM.",
+    "copy": "Copiar bio",
+    "copied": "Copiada"
   },
-  "footer": {
+  "music": {
+    "title": "Música",
+    "releasesTitle": "Releases",
+    "listen": "Escuchar en Bandcamp",
+    "sessionsTitle": "Live sessions",
+    "play": "Escuchar",
+    "sessions": [
+      {
+        "title": "SAT 002",
+        "url": "https://soundcloud.com/nebulacircuit/sat-002-nebula-circuit-live"
+      }
+    ],
+    "releases": [
+      {
+        "id": "cold-stream",
+        "title": "Cold Stream",
+        "label": "B L A D E",
+        "date": "29 abril 2026",
+        "description": "EP digital. Cinco tracks de electro crudo, machine funk y tensión EBM. Incluye remix de Dark Vektor.",
+        "url": "https://blade666.bandcamp.com/album/cold-stream",
+        "image": "cold-stream"
+      },
+      {
+        "id": "synthetic",
+        "title": "Synthetic Resistance",
+        "label": "Raw Planet",
+        "date": "23 diciembre 2025",
+        "description": "EP digital. Tres temas de electro profundo y atmósferas sólidas.",
+        "url": "https://rawplanet.bandcamp.com/album/synthetic-resistance-rwplnt-005",
+        "image": "synthetic-resistance"
+      },
+      {
+        "id": "talisman",
+        "title": "Talisman",
+        "label": "BARRO",
+        "date": "16 septiembre 2025",
+        "description": "Vinilo 12\" y digital. EBM, techno y electroclash para la pista. Incluye remixes de Orlok 101 y Abraxas.",
+        "url": "https://barrolabel.bandcamp.com/album/talisman",
+        "image": "talisman"
+      },
+      {
+        "id": "scars",
+        "title": "Scars On A D. Mind",
+        "label": "Fill-Lex Records",
+        "date": "6 diciembre 2024",
+        "description": "EP en cassette y digital. Downtempo, leftfield y electro con esencia oscura. Cinco cortes incluyendo bonus digital.",
+        "url": "https://fill-lexrecords.bandcamp.com/album/scars-on-a-digital-mind",
+        "image": "scars-on-a-digital-mind"
+      }
+    ]
+  },
+  "media": {
+    "title": "Fotos y vídeos",
+    "photosTitle": "Fotos",
+    "videosTitle": "Vídeos",
+    "downloadPhotos": "Fotos HQ",
+    "downloadVideos": "Vídeos HQ",
+    "downloadOne": "Descargar foto {n} en alta",
+    "photoAlt": "Nebula Circuit, foto {n}",
+    "videoLabel": "Nebula Circuit, vídeo {n}"
+  },
+  "rider": {
+    "title": "Live setup y rider",
+    "summaryTitle": "De un vistazo",
+    "summary": [
+      "PA 100 dB SPL RMS",
+      "XLR balanceado",
+      "Rec out",
+      "Monitores",
+      "Mesa 100×60 cm · ≥110 cm",
+      "Soundcheck 30 min"
+    ],
+    "setupTitle": "Live setup",
+    "setupIntro": "Hardware live setup, sin ordenador",
+    "diagramAlt": "Diagrama del live setup: Analog Rytm, Analog Four, Octatrack, The Pill y Golden Master",
+    "gear": [
+      { "name": "Analog Rytm (AR)", "role": "drums" },
+      { "name": "Analog Four (A4)", "role": "bajos, subs, FX y leads" },
+      { "name": "Octatrack (OT)", "role": "mixer y disparo de samples" },
+      { "name": "The Pill", "role": "ducking" },
+      { "name": "Endorphines Golden Master", "role": "procesador end-of-chain" }
+    ],
+    "routingTitle": "Signal flow",
+    "routing": [
+      "AR track 1 (kick) → entrada trigger de The Pill",
+      "A4 track 1 (sub-bass) → entrada de audio de The Pill",
+      "Kick → un canal del OT; sub-bass → segundo canal del OT",
+      "Salida principal del A4 → entrada de audio del AR; salida master del AR → tercer canal del OT",
+      "Golden Master al final de la cadena para compresión"
+    ],
+    "techTitle": "Rider técnico",
+    "general": {
+      "title": "General",
+      "text": "Se requiere un sistema de PA de tamaño adecuado en la sala, con una fuente de alimentación fiable que garantice 100 dB SPL RMS sin distorsión en la mesa de mezclas."
+    },
+    "tech": {
+      "title": "Lo que necesito (técnico)",
+      "items": [
+        "Entradas XLR o balanceadas preferidas sobre RCA para la señal de audio de salida (desde el procesador end-of-chain)",
+        "Rec out",
+        "Monitores"
+      ]
+    },
+    "stage": {
+      "title": "Lo que necesito (escenario)",
+      "text": "100cm × 60cm en una mesa de al menos 110 cm de alto. Se prefiere un ambiente oscuro o luz cálida."
+    },
+    "arrival": {
+      "title": "Llegada",
+      "text": "Por favor, proporcionar indicaciones detalladas, la dirección completa de la sala y un teléfono de contacto. También necesitaré el horario de prueba de sonido, apertura de puertas y hora de salida al escenario. Para la prueba de sonido, 30 minutos deberían ser suficientes."
+    },
+    "openPage": "Rider en página propia",
+    "print": "Imprimir / guardar PDF",
+    "back": "Volver al presskit"
+  },
+  "contact": {
+    "title": "Contacto",
+    "lead": "Booking, prensa y sellos",
+    "email": "nebulacircuit21@gmail.com",
+    "copy": "Copiar email",
+    "copied": "Copiado"
+  },
+  "social": {
     "instagram": "Instagram",
-    "soundcloud": "Soundcloud",
+    "soundcloud": "SoundCloud",
     "discogs": "Discogs"
   },
   "error": {
-    "generic": "¡Ups!",
+    "generic": "Error",
     "unexpected": "Ha ocurrido un error inesperado.",
-    "notFound": "No se encontró la página solicitada."
+    "notFound": "No se encontró la página solicitada.",
+    "home": "Ir al presskit"
   }
 }

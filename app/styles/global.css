@@ -1,0 +1,192 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/JetBrainsMono-latin-ext.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/JetBrainsMono-latin.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  color-scheme: dark;
+
+  --bg: #0a0b0f;
+  --paper: #12141c;
+  --paper-2: #181b25;
+  --text: #e8e8ec;
+  --muted: #9a9aaa;
+  --cyan: #00e5ff;
+  --cyan-soft: rgb(0 229 255 / 0.08);
+  --magenta: #e040fb;
+  --line: rgb(0 229 255 / 0.16);
+  --line-strong: rgb(0 229 255 / 0.4);
+  --photo-bg: #10142a;
+
+  --font: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --max: 1200px;
+  --radius: 2px;
+  --header-h: 3.25rem;
+  --tabbar-h: 3.75rem;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.error-page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4rem var(--gutter);
+}
+
+.error-page__code {
+  color: var(--cyan);
+  font-size: var(--fs-sm);
+}
+
+.error-page h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.error-page pre {
+  margin-top: 2rem;
+  overflow-x: auto;
+  font-size: var(--fs-xs);
+}
+
+/* Rider page prints as a plain black-on-white sheet */
+@media print {
+  :root {
+    color-scheme: light;
+    --bg: #fff;
+    --paper: #fff;
+    --paper-2: #fff;
+    --text: #000;
+    --muted: #333;
+    --cyan: #000;
+    --magenta: #000;
+    --line: #bbb;
+    --line-strong: #000;
+    --cyan-soft: transparent;
+  }
+
+  @page {
+    margin: 12mm;
+  }
+
+  /* Everything is sized in rem, so scaling the root fits the rider on one A4 sheet */
+  html {
+    font-size: 11px;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

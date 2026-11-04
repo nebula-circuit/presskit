@@ -1,0 +1,28 @@
+.main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter) calc(var(--tabbar-h) + var(--safe-bottom) + 2rem);
+}
+
+.main > section {
+  padding-top: 4rem;
+  scroll-margin-top: var(--header-h);
+}
+
+.main > section:first-child {
+  padding-top: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding-bottom: 4rem;
+  }
+
+  .main > section {
+    padding-top: 6rem;
+  }
+
+  .main > section:first-child {
+    padding-top: 3rem;
+  }
+}

@@ -1,0 +1,29 @@
+.switch {
+  display: flex;
+  border: 1px solid var(--line);
+}
+
+.option {
+  display: grid;
+  place-items: center;
+  min-width: 2.5rem;
+  min-height: 2rem;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.option + .option {
+  border-left: 1px solid var(--line);
+}
+
+.option:hover {
+  color: var(--text);
+}
+
+.option[aria-current='true'] {
+  background: var(--cyan-soft);
+  color: var(--cyan);
+}

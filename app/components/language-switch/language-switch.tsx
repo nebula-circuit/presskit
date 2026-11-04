@@ -1,35 +1,32 @@
-import ButtonGroup from '@mui/material/ButtonGroup'
-import { useTranslation } from 'react-i18next'
-import { type Language, languages, setStoredLanguage } from '@/i18n'
-import { LangButton } from './style'
+import { Link, useLocation } from 'react-router'
+import { languages, localePath, stripLang, useLang, useT } from '@/i18n'
+import s from './style.module.css'
 
-export default function LanguageSwitch() {
-  const { i18n } = useTranslation()
+interface LanguageSwitchProps {
+  /** Anchor to keep when switching, so the reader stays on the same section */
+  hash?: string
+}
 
-  const currentLang = (i18n.language?.slice(0, 2) || 'es') as Language
-  const effectiveLang = languages.includes(currentLang) ? currentLang : 'es'
-
-  const handleChange = (lng: Language) => {
-    i18n.changeLanguage(lng)
-    setStoredLanguage(lng)
-
-    if (typeof document !== 'undefined') {
-      document.documentElement.lang = lng
-    }
-  }
+export default function LanguageSwitch({ hash = '' }: LanguageSwitchProps) {
+  const t = useT()
+  const lang = useLang()
+  const path = stripLang(useLocation().pathname)
 
   return (
-    <ButtonGroup size='small' variant='text' aria-label='Language'>
-      {languages.map((lng) => (
-        <LangButton
-          key={lng}
-          $active={effectiveLang === lng}
-          onClick={() => handleChange(lng)}
-          aria-pressed={effectiveLang === lng}
+    <div role='group' aria-label={t.language.label} className={s.switch}>
+      {languages.map((l) => (
+        <Link
+          key={l}
+          to={`${localePath(l, path)}${hash}`}
+          hrefLang={l}
+          lang={l}
+          title={t.language.names[l]}
+          aria-current={l === lang ? 'true' : undefined}
+          className={s.option}
         >
-          {lng.toUpperCase()}
-        </LangButton>
+          {l.toUpperCase()}
+        </Link>
       ))}
-    </ButtonGroup>
+    </div>
   )
 }

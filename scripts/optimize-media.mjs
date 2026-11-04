@@ -179,10 +179,15 @@ const media = {
   downloads: {
     photos: {
       file: 'downloads/nebula-circuit-press-photos.zip',
+      dir: rel('download-img'),
+      // Each photo is also linked individually from the gallery
+      keepSources: true,
       ...(await folderBytes('download-img')),
     },
     videos: {
       file: 'downloads/nebula-circuit-press-videos.zip',
+      dir: rel('download-video'),
+      keepSources: false,
       ...(await folderBytes('download-video')),
     },
   },

@@ -1,0 +1,95 @@
+.section {
+  display: grid;
+  gap: 1.75rem;
+  padding-top: 1.25rem;
+}
+
+.hero {
+  position: relative;
+  border: 1px solid var(--line-strong);
+  background: var(--photo-bg);
+}
+
+.heroImg {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgb(10 11 15 / 0.75);
+  color: var(--cyan);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--magenta);
+  box-shadow: 0 0 8px var(--magenta);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dot {
+    animation: rec 1.6s steps(1) infinite;
+  }
+}
+
+@keyframes rec {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.name {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.meta {
+  margin: 0.75rem 0 2.25rem;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+.text {
+  max-width: 62ch;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+/* Tablet: keep the photo from filling the whole first screen */
+@media (min-width: 600px) and (max-width: 1023.98px) {
+  .heroImg {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 3.5rem;
+    padding-top: 3rem;
+  }
+
+  .heroImg {
+    aspect-ratio: 4 / 5;
+  }
+
+  .text {
+    font-size: var(--fs-md);
+  }
+}
