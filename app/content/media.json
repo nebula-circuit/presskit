@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "width": 1300,
+    "height": 1040,
+    "widths": [640, 1024, 1300],
+    "base": "assets/img/hero"
+  },
+  "gallery": [
+    {
+      "id": "1",
+      "width": 3024,
+      "height": 4032,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/1",
+      "hq": "assets/download-img/nebula-circuit-1.jpg"
+    },
+    {
+      "id": "2",
+      "width": 3025,
+      "height": 4538,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/2",
+      "hq": "assets/download-img/nebula-circuit-2.jpg"
+    },
+    {
+      "id": "3",
+      "width": 3024,
+      "height": 4032,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/3",
+      "hq": "assets/download-img/nebula-circuit-3.jpg"
+    },
+    {
+      "id": "4",
+      "width": 3024,
+      "height": 4032,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/4",
+      "hq": "assets/download-img/nebula-circuit-4.jpg"
+    },
+    {
+      "id": "5",
+      "width": 2268,
+      "height": 4032,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/5",
+      "hq": "assets/download-img/nebula-circuit-5.jpg"
+    },
+    {
+      "id": "6",
+      "width": 2268,
+      "height": 4032,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/6",
+      "hq": "assets/download-img/nebula-circuit-6.jpg"
+    },
+    {
+      "id": "7",
+      "width": 2268,
+      "height": 4032,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/7",
+      "hq": "assets/download-img/nebula-circuit-7.jpg"
+    },
+    {
+      "id": "8",
+      "width": 3024,
+      "height": 4537,
+      "widths": [480, 960, 1600],
+      "base": "assets/img/gallery/8",
+      "hq": "assets/download-img/nebula-circuit-8.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "src": "assets/video/nebula-circuit-1.mp4",
+      "poster": "assets/video/nebula-circuit-1.webp",
+      "width": 848,
+      "height": 480
+    },
+    {
+      "src": "assets/video/nebula-circuit-2.mp4",
+      "poster": "assets/video/nebula-circuit-2.webp",
+      "width": 848,
+      "height": 480
+    },
+    {
+      "src": "assets/video/nebula-circuit-3.mp4",
+      "poster": "assets/video/nebula-circuit-3.webp",
+      "width": 480,
+      "height": 848
+    },
+    {
+      "src": "assets/video/nebula-circuit-4.mp4",
+      "poster": "assets/video/nebula-circuit-4.webp",
+      "width": 406,
+      "height": 720
+    }
+  ],
+  "images": {
+    "live-setup-diagram": {
+      "src": "assets/img/live-setup-diagram.webp",
+      "width": 1399,
+      "height": 871
+    },
+    "cold-stream": {
+      "src": "assets/img/cold-stream.webp",
+      "width": 350,
+      "height": 350
+    },
+    "synthetic-resistance": {
+      "src": "assets/img/synthetic-resistance.webp",
+      "width": 700,
+      "height": 700
+    },
+    "talisman": {
+      "src": "assets/img/talisman.webp",
+      "width": 700,
+      "height": 700
+    },
+    "scars-on-a-digital-mind": {
+      "src": "assets/img/scars-on-a-digital-mind.webp",
+      "width": 700,
+      "height": 700
+    }
+  },
+  "downloads": {
+    "photos": {
+      "file": "downloads/nebula-circuit-press-photos.zip",
+      "files": [
+        "nebula-circuit-1.jpg",
+        "nebula-circuit-2.jpg",
+        "nebula-circuit-3.jpg",
+        "nebula-circuit-4.jpg",
+        "nebula-circuit-5.jpg",
+        "nebula-circuit-6.jpg",
+        "nebula-circuit-7.jpg",
+        "nebula-circuit-8.jpg",
+        "nebula-circuit-live-setup-diagram.jpeg"
+      ],
+      "bytes": 21295891
+    },
+    "videos": {
+      "file": "downloads/nebula-circuit-press-videos.zip",
+      "files": [
+        "nebula-circuit-1.mp4",
+        "nebula-circuit-2.mp4",
+        "nebula-circuit-3.mp4",
+        "nebula-circuit-4.mp4"
+      ],
+      "bytes": 69058405
+    }
+  }
+}
