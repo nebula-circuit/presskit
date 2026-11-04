@@ -4,14 +4,6 @@
   background: var(--paper);
 }
 
-.lead {
-  margin-bottom: 0.75rem;
-  color: var(--muted);
-  font-size: var(--fs-xs);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .emailRow {
   display: flex;
   flex-wrap: wrap;

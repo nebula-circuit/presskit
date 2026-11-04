@@ -103,6 +103,11 @@
       "width": 1399,
       "height": 871
     },
+    "lignite-layers": {
+      "src": "assets/img/lignite-layers.webp",
+      "width": 480,
+      "height": 480
+    },
     "cold-stream": {
       "src": "assets/img/cold-stream.webp",
       "width": 350,

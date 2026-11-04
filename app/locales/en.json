@@ -28,7 +28,7 @@
   },
   "bio": {
     "title": "Bio",
-    "text": "Nebula Circuit is an electronic music project focused on analogue-rooted electro. The sound is built entirely on hardware — drum machines, synths and sharp sequences — drawing from old-school electro, the so-called Hague sound and the early EBM waves. Live shows are performed without computers, going for a physical, raw approach. Has put out music on labels such as Blade and Barro, both part of the current electro and EBM circuit.",
+    "text": "Nebula Circuit is an electronic music project focused on analogue-rooted electro. The sound is built with drum machines, synths and sharp sequences, drawing from old-school electro and the so-called Hague sound. Live shows go for a physical, raw approach built for the dancefloor. Has put out music on labels such as Blade and Barro, both part of the current electro and EBM circuit.",
     "copy": "Copy bio",
     "copied": "Copied"
   },
@@ -38,13 +38,23 @@
     "listen": "Listen on Bandcamp",
     "sessionsTitle": "Live sessions",
     "play": "Play",
+    "upcoming": "Coming soon",
     "sessions": [
       {
-        "title": "SAT 002",
-        "url": "https://soundcloud.com/nebulacircuit/sat-002-nebula-circuit-live"
+        "title": "Nebula Circuit Live - Microm Podcast",
+        "url": "https://soundcloud.com/negociusman/microm-podcast-026-nebula"
       }
     ],
     "releases": [
+      {
+        "id": "lignite-layers",
+        "title": "Lignite Layers",
+        "label": "Microm Records",
+        "date": "November 5, 2026",
+        "description": "New EP on Microm Records. Available from November 5.",
+        "image": "lignite-layers",
+        "upcoming": true
+      },
       {
         "id": "cold-stream",
         "title": "Cold Stream",
@@ -105,7 +115,7 @@
       "Soundcheck 30 min"
     ],
     "setupTitle": "Live setup",
-    "setupIntro": "Hardware live setup, no computer",
+    "setupIntro": "Hardware live setup",
     "diagramAlt": "Live setup diagram: Analog Rytm, Analog Four, Octatrack, The Pill and Golden Master",
     "gear": [
       { "name": "Analog Rytm (AR)", "role": "drums" },
@@ -149,7 +159,6 @@
   },
   "contact": {
     "title": "Contact",
-    "lead": "Booking, press and labels",
     "email": "nebulacircuit21@gmail.com",
     "copy": "Copy email",
     "copied": "Copied"

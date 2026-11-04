@@ -82,6 +82,35 @@
   text-transform: uppercase;
 }
 
+/* Upcoming release: static card, no link or hover */
+.soon,
+.soon:hover {
+  border-style: dashed;
+  border-color: var(--line-strong);
+  cursor: default;
+}
+
+.badge {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--magenta);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+}
+
 .sessions {
   display: grid;
   gap: 0.75rem;
@@ -114,11 +143,13 @@
 
   .info,
   .desc,
-  .cta {
+  .cta,
+  .badge {
     padding-inline: 1rem;
   }
 
-  .cta {
+  .cta,
+  .badge {
     align-self: end;
   }
 }

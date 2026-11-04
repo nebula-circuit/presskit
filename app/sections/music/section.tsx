@@ -3,6 +3,7 @@ import SectionHeader from '@/components/section-header/section-header'
 import SoundcloudFacade from '@/components/soundcloud-facade/soundcloud-facade'
 import { asset, media } from '@/content/media'
 import { useT } from '@/i18n'
+import { cx } from '@/utils/cx'
 import s from './style.module.css'
 
 type CoverKey = keyof typeof media.images
@@ -18,25 +19,42 @@ export default function MusicSection() {
       <ul className={s.releases}>
         {t.music.releases.map((release) => {
           const cover = media.images[release.image as CoverKey]
+          const content = (
+            <>
+              <img
+                src={asset(cover.src)}
+                width={cover.width}
+                height={cover.height}
+                alt=''
+                loading='lazy'
+                decoding='async'
+                className={s.cover}
+              />
+              <span className={s.info}>
+                <span className={s.label}>{release.label}</span>
+                <span className={s.title}>{release.title}</span>
+                <span className={s.date}>{release.date}</span>
+              </span>
+              <span className={s.desc}>{release.description}</span>
+            </>
+          )
+
+          // Upcoming releases have no store page yet: shown as a static, non-clickable card
+          if (release.upcoming || !release.url) {
+            return (
+              <li key={release.id}>
+                <div className={cx(s.release, s.soon)}>
+                  {content}
+                  <span className={s.badge}>{t.music.upcoming}</span>
+                </div>
+              </li>
+            )
+          }
 
           return (
             <li key={release.id}>
               <a href={release.url} target='_blank' rel='noopener noreferrer' className={s.release}>
-                <img
-                  src={asset(cover.src)}
-                  width={cover.width}
-                  height={cover.height}
-                  alt=''
-                  loading='lazy'
-                  decoding='async'
-                  className={s.cover}
-                />
-                <span className={s.info}>
-                  <span className={s.label}>{release.label}</span>
-                  <span className={s.title}>{release.title}</span>
-                  <span className={s.date}>{release.date}</span>
-                </span>
-                <span className={s.desc}>{release.description}</span>
+                {content}
                 <span className={s.cta}>
                   {t.music.listen} <ArrowUpRightIcon size={14} />
                 </span>

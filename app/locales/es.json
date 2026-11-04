@@ -28,7 +28,7 @@
   },
   "bio": {
     "title": "Bio",
-    "text": "Nebula Circuit es un proyecto de música electrónica centrado en un electro de raíz analógica. Su sonido se construye íntegramente con hardware — cajas de ritmos, sintetizadores y secuencias afiladas — bebiendo del electro old-school, el llamado Hague sound y las primeras olas de EBM. El directo se ejecuta sin ordenadores, con un planteamiento físico y crudo. Cuenta con referencias publicadas en sellos como Blade y Barro, dos espacios afines al circuito actual del electro y el EBM.",
+    "text": "Nebula Circuit es un proyecto de música electrónica centrado en un electro de raíz analógica. Su sonido se construye con cajas de ritmos, sintetizadores y secuencias afiladas, bebiendo del electro old-school y del llamado Hague sound. En directo apuesta por un planteamiento físico y crudo, pensado para la pista. Cuenta con referencias publicadas en sellos como Blade y Barro, dos espacios afines al circuito actual del electro y el EBM.",
     "copy": "Copiar bio",
     "copied": "Copiada"
   },
@@ -38,13 +38,23 @@
     "listen": "Escuchar en Bandcamp",
     "sessionsTitle": "Live sessions",
     "play": "Escuchar",
+    "upcoming": "Próximamente",
     "sessions": [
       {
-        "title": "SAT 002",
-        "url": "https://soundcloud.com/nebulacircuit/sat-002-nebula-circuit-live"
+        "title": "Nebula Circuit Live - Microm Podcast",
+        "url": "https://soundcloud.com/negociusman/microm-podcast-026-nebula"
       }
     ],
     "releases": [
+      {
+        "id": "lignite-layers",
+        "title": "Lignite Layers",
+        "label": "Microm Records",
+        "date": "5 noviembre 2026",
+        "description": "Nuevo EP en Microm Records. Disponible desde el 5 de noviembre.",
+        "image": "lignite-layers",
+        "upcoming": true
+      },
       {
         "id": "cold-stream",
         "title": "Cold Stream",
@@ -105,7 +115,7 @@
       "Soundcheck 30 min"
     ],
     "setupTitle": "Live setup",
-    "setupIntro": "Hardware live setup, sin ordenador",
+    "setupIntro": "Hardware live setup",
     "diagramAlt": "Diagrama del live setup: Analog Rytm, Analog Four, Octatrack, The Pill y Golden Master",
     "gear": [
       { "name": "Analog Rytm (AR)", "role": "drums" },
@@ -149,7 +159,6 @@
   },
   "contact": {
     "title": "Contacto",
-    "lead": "Booking, prensa y sellos",
     "email": "nebulacircuit21@gmail.com",
     "copy": "Copiar email",
     "copied": "Copiado"

@@ -171,6 +171,7 @@ const media = {
   videos: await videos(),
   images: await images([
     'live-setup-diagram.webp',
+    'lignite-layers.webp',
     'cold-stream.webp',
     'synthetic-resistance.webp',
     'talisman.webp',

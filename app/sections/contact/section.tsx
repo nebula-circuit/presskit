@@ -14,7 +14,6 @@ export default function ContactSection() {
       <SectionHeader id='contact' title={t.contact.title} />
 
       <div className={s.panel}>
-        <p className={s.lead}>{t.contact.lead}</p>
         <div className={s.emailRow}>
           <a href={`mailto:${email}`} className={s.email}>
             <MailIcon size={20} />
