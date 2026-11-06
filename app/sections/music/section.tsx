@@ -8,8 +8,21 @@ import s from './style.module.css'
 
 type CoverKey = keyof typeof media.images
 
+// Upcoming releases are added with `"upcoming": true` and no `url` until they're out
+interface Release {
+  id: string
+  title: string
+  label: string
+  date: string
+  description: string
+  image: string
+  url?: string
+  upcoming?: boolean
+}
+
 export default function MusicSection() {
   const t = useT()
+  const releases: Release[] = t.music.releases
 
   return (
     <section id='music' aria-labelledby='music-title' className={s.section}>
@@ -17,7 +30,7 @@ export default function MusicSection() {
 
       <h3 className={s.sub}>{t.music.releasesTitle}</h3>
       <ul className={s.releases}>
-        {t.music.releases.map((release) => {
+        {releases.map((release) => {
           const cover = media.images[release.image as CoverKey]
           const content = (
             <>
